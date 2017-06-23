@@ -1,23 +1,5 @@
-import React,{Component} from 'react'
+import * as actions from './actions.js'
+import reducer from './reducer.js'
+import view from './views/Editor.js'
 
-
-class Editor extends Component{
-
-    constructor(){
-        super(...arguments)
-
-        this.onInputChange = this.onInputChange.bind(this)
-    }
-
-    onInputChange(e){
-        this.props.onChange(e)
-    }
-
-    render(){
-        return(
-                <textarea value={this.props.value} onChange={this.onInputChange}></textarea>
-        )
-    }
-}
-
-export default Editor
+export {actions,reducer,view}
