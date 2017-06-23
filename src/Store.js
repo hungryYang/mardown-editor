@@ -1,12 +1,12 @@
-import {createStore,combineReducers,applyMiddleware,compose} from 'redux'
+import {createStore,applyMiddleware,compose} from 'redux'
 
 import {reducer as editorReducer} from './editor'
 
 const win = window
 
-const reducer = combineReducers({
-    editor:editorReducer
-})
+// const reducer = combineReducers({
+//     editor:editorReducer
+// })
 
 const middlewares = [];
 if (process.env.NODE_ENV !== 'production') {
