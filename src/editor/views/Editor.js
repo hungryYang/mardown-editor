@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
-
+ 
 import {editNow} from '../actions.js'
 
 class Editor extends Component{

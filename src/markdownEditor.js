@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import {view as Editor} from './editor'
+import {View as Editor} from './editor'
 import OverView from './overview/'
 
 class MarkdownEditor extends Component{
