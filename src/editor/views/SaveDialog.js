@@ -19,15 +19,20 @@ class SaveDialog extends Component {
     });
   }
   handleOk = () => {
+    if(!this.state.fileName){
+      alert("请输入文件名")
+      return;
+    }
+      
     this.setState({ loading: true });
     var fileName = this.state.fileName
     this.props.onSave(fileName)
 
-        this.setState({ 
-            loading: false,
-            visible: false,
-            fileName:''
-        });
+    this.setState({ 
+        loading: false,
+        visible: false,
+        fileName:''
+    });
 
   }
   handleCancel = () => {
@@ -59,7 +64,7 @@ class SaveDialog extends Component {
             </Button>,
           ]}
         >
-                <Input placeholder="filename" value={this.state.fileName} onChange={this.onInputChange}></Input>
+                <Input required placeholder="filename" value={this.state.fileName} onChange={this.onInputChange}></Input>
         </Modal>
       </div>
     );

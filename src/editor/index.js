@@ -5,7 +5,6 @@ import reducer from './reducer.js'
 import Editor from './views/Editor.js'
 import SaveDialog from './views/SaveDialog.js'
 import ShowFiles from './views/ShowFiles.js'
-import FileLists from './views/FileLists.js'
 
 class View extends Component{
 
@@ -15,7 +14,6 @@ class View extends Component{
                 <Editor></Editor>
                 <SaveDialog></SaveDialog>
                 <ShowFiles></ShowFiles>
-                <FileLists></FileLists>
             </div>                
         )
     }

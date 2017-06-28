@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import { Modal, Button } from 'antd';
-
+import FileLists from './FileLists.js'
 class ShowFiles extends Component {
   constructor(){
       super(...arguments)
@@ -16,13 +16,11 @@ class ShowFiles extends Component {
     });
   }
   handleOk = (e) => {
-    console.log(e);
     this.setState({
       visible: false,
     });
   }
   handleCancel = (e) => {
-    console.log(e);
     this.setState({
       visible: false,
     });
@@ -40,9 +38,7 @@ class ShowFiles extends Component {
               <Button key="back" size="large" type="primary" onClick={this.handleCancel}>OK</Button>
           ]}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <FileLists></FileLists>
         </Modal>
       </div>
     );

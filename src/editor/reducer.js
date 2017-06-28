@@ -1,4 +1,4 @@
-import {EDIT_NOW,SAVE_FILE} from './actionTypes.js'
+import {EDIT_NOW,SAVE_FILE,DELETE_FILE} from './actionTypes.js'
 
 const initialState = {
     "value":`test`,
@@ -27,6 +27,16 @@ export default (state ,action) => {
             return newState
         }
 
+        case DELETE_FILE:{
+            fileName = action.fileName
+            newFile = state.file.slice()
+            newFile = newFile.filter((currentValue)=>{
+                return currentValue.fileName!==fileName
+            })
+
+            newState = Object.assign({},state,{file:newFile})
+            return newState
+        }
         default:
             return state
     }

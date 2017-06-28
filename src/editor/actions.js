@@ -1,4 +1,4 @@
-import {EDIT_NOW,SAVE_FILE,EDIT_FILE}　from './actionTypes.js'
+import {EDIT_NOW,SAVE_FILE,DELETE_FILE}　from './actionTypes.js'
 
 export const editNow = (value)=>({
     type:EDIT_NOW,
@@ -11,7 +11,7 @@ export const saveFile = (fileName) => ({
     value:''
 })
 
-export const editFile = (value)=>({
-    type:EDIT_FILE,
-    value
+export const deleteFile = (fileName)=>({
+    type:DELETE_FILE,
+    fileName
 })
