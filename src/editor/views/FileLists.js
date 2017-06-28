@@ -2,10 +2,10 @@ import React from 'react'
 import {connect} from 'react-redux'
 import FileItem from './FileItem.js'
 
-const FileLists = ({state})=>{
+const FileLists = ({state,visible,onClick})=>{
     const file = state.file
     return (
-        <ul>  
+        <ul onClick={()=>{ onClick()}}>  
             {
                 file.map((currentFile)=>(
                     <FileItem

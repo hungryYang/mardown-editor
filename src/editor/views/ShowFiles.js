@@ -38,7 +38,7 @@ class ShowFiles extends Component {
               <Button key="back" size="large" type="primary" onClick={this.handleCancel}>OK</Button>
           ]}
         >
-          <FileLists></FileLists>
+          <FileLists onClick={this.handleCancel}></FileLists>
         </Modal>
       </div>
     );
