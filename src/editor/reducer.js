@@ -1,7 +1,7 @@
 import {EDIT_NOW,SAVE_FILE} from './actionTypes.js'
 
 const initialState = {
-    "value":'',
+    "value":`test`,
     "file":[]
 }
 
@@ -16,9 +16,12 @@ export default (state ,action) => {
         }
 
         case SAVE_FILE:{
+            var fileName=action.fileName
             var newFile = state.file.slice()
-            var obj = {}
-            obj[`${action.fileName}`]={fileName:action.fileName,value:state.value}
+            newFile = newFile.filter((currentValue)=>{
+                return currentValue.fileName!==fileName
+            })
+            var obj = {fileName:action.fileName,value:state.value}
             newFile.push(obj)
             newState = Object.assign({},state,{file:newFile})
             return newState
