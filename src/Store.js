@@ -1,6 +1,6 @@
 import {createStore,applyMiddleware,compose} from 'redux'
 
-import {reducer as editorReducer} from './editor'
+import editorReducer from './reducer.js'
 
 const win = window
 

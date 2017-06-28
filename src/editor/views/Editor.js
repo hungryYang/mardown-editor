@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
  
-import {editNow} from '../actions.js'
+import {editNow} from '../../actions.js'
 
 class Editor extends Component{
 
@@ -17,15 +17,14 @@ class Editor extends Component{
 
     onInputChange(e){
         var value = e.target.value
-        // this.setState({
-        //     value
-        // })
         this.props.onEdit(value)
     }
 
     render(){
         return(
-            <textarea value={this.props.state.value} onChange={this.onInputChange}></textarea>
+            <div className="edit-area">
+                <textarea value={this.props.state.value} onChange={this.onInputChange}></textarea>
+            </div>            
         )
     }
 }

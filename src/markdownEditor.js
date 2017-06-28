@@ -1,12 +1,14 @@
 import React,{Component} from 'react'
-import {View as Editor} from './editor'
+import Editor from './editor'
+import ToolBar from './toolbar/'
 import OverView from './overview/'
 
 class MarkdownEditor extends Component{
     render(){
         return (
             <div>
-                <Editor/>
+                <Editor />
+                <ToolBar />
                 <OverView />
             </div>
         )

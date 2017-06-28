@@ -1,7 +1,8 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import { Modal, Button, Input} from 'antd';
-import {saveFile} from '../actions.js'
+import {saveFile} from '../../actions.js'
+
 
 class SaveDialog extends Component {
   constructor(){
