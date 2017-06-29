@@ -5,7 +5,7 @@ import FileItem from './FileItem.js'
 const FileLists = ({state,visible,onClick})=>{
     const file = state.file
     return (
-        <ul onClick={()=>{ onClick()}}>  
+        <ul className="filelists" onClick={()=>{ onClick()}}>  
             {
                 file.map((currentFile)=>(
                     <FileItem

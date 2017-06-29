@@ -1,16 +1,25 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Button} from 'antd'
 import {editNow,deleteFile} from '../../actions.js'
+
+
 const FileItem = ({fileName,fileValue,onEdit,onDel})=>{
     var blob = new Blob([fileValue])
     return (
-        <li>  
-            <div onClick={()=>{onEdit(fileValue)}}>
+        <li onClick={()=>{onEdit(fileValue)}}>  
+           
                 {fileName}
-                <Button type="danger" onClick={()=>{onDel(fileName)}}>Delete</Button>
-                <a href={window.URL.createObjectURL(blob)} download={fileName+'.md'}>下载</a>
-            </div>  
+                <span>
+                  <svg className="icon" aria-hidden="true"  onClick={()=>{onDel(fileName)}}>
+                    <use xlinkHref="#icon-shanchu"></use>
+                  </svg>
+                  <a href={window.URL.createObjectURL(blob)} download={fileName+'.md'}>
+                    <svg className="icon" aria-hidden="true"  onClick={()=>{onDel(fileName)}}>
+                      <use xlinkHref="#icon-xiazai"></use>
+                    </svg>
+                  </a> 
+                </span>
+       
         </li>         
     )
 }

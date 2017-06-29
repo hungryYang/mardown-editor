@@ -27,10 +27,12 @@ class ShowFiles extends Component {
   }
   render() {
     return (
-      <div>
-        <Button type="primary" onClick={this.showModal}>Open</Button>
+      <div className="tool">
+         <svg className="icon" aria-hidden="true"  onClick={this.showModal}>
+            <use xlinkHref="#icon-wenjianjia"></use>
+        </svg>
         <Modal
-          title="Basic Modal"
+          title="File List"
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}

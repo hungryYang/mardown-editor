@@ -2,8 +2,9 @@ import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import { Modal, Button, Input} from 'antd';
 import {saveFile} from '../../actions.js'
-
-
+var style ={
+  "fontSize":"16px"
+}
 class SaveDialog extends Component {
   constructor(){
     super(...arguments)
@@ -48,24 +49,24 @@ class SaveDialog extends Component {
   render() {
     const { visible, loading } = this.state;
     return (
-      <div>
-        <Button type="primary" onClick={this.showModal}>
-          SAVE
-        </Button>
+      <div className="tool">
+        <svg className="icon" aria-hidden="true" onClick={this.showModal}>
+            <use xlinkHref="#icon-tianjia"></use>
+        </svg>
         <Modal
+          style={style}
           visible={visible}
-          title="Title"
+          title="Please enter the filename"
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
-
             <Button key="back" size="large" onClick={this.handleCancel}>CANCEL</Button>,
             <Button key="submit"  type="primary" size="large" loading={loading} onClick={this.handleOk}>
               SAVE
             </Button>,
           ]}
         >
-                <Input required placeholder="filename" value={this.state.fileName} onChange={this.onInputChange}></Input>
+                <Input style={style} required placeholder="filename" value={this.state.fileName} onChange={this.onInputChange}></Input>
         </Modal>
       </div>
     );
