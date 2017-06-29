@@ -1,0 +1,16 @@
+div.edit-area{
+    text-align: center;
+    padding-top:120px;
+    textarea{
+        font-size:20px;
+        min-height: 500px;
+        background-color: transparent;
+        color : #424242;
+        line-height: 1.5;
+        overflow-x:hidden; 
+        outline:none;
+        border:none;
+        width: 800px;
+    }
+
+}

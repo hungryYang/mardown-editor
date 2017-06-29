@@ -9,13 +9,11 @@ marked.setOptions({
     return highlight.highlightAuto(code).value;
   }
 });
-var style = {
-  fontFamily:'Inconsolata, monospace'
-}
+
 const OverView = ({state})=>{
     var value = state.value||' '
     return (
-        <div　style={style}>
+        <div>
             <span dangerouslySetInnerHTML={ {__html: marked(value)}} />
         </div>            
     )

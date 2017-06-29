@@ -6,6 +6,7 @@ import 'antd/dist/antd.css'
 import store from './Store.js'
 import MarkdownEditor from './markdownEditor.js'
 
+import './style.scss'
 ReactDOM.render(
     <Provider store={store}>
         <MarkdownEditor/>

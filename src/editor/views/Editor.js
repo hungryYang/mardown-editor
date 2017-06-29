@@ -1,9 +1,9 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
- 
+import Textarea from 'react-textarea-autosize'
 import {editNow} from '../../actions.js'
 
-class Editor extends Component{
+class ditor extends Component{
 
     constructor(){
         super(...arguments)
@@ -16,6 +16,7 @@ class Editor extends Component{
     }
 
     onInputChange(e){
+        console.log(1)
         var value = e.target.value
         this.props.onEdit(value)
     }
@@ -23,7 +24,7 @@ class Editor extends Component{
     render(){
         return(
             <div className="edit-area">
-                <textarea value={this.props.state.value} onChange={this.onInputChange}></textarea>
+                <Textarea value={this.props.state.value} onChange={this.onInputChange}></Textarea>
             </div>            
         )
     }
@@ -43,4 +44,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-export default connect (mapStateToProps,mapDispatchToProps)(Editor)
+export default connect (mapStateToProps,mapDispatchToProps)(ditor)

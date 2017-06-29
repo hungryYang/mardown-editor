@@ -1,7 +1,20 @@
 import {EDIT_NOW,SAVE_FILE,DELETE_FILE} from './actionTypes.js'
 
 const initialState = {
-    "value":`test`,
+    "value":`## Welcome 
+
+这是一个简易的Markdown编辑器 
+
+用React，Redux构建 后续会逐渐添加功能
+
+ [项目地址](https://github.com/hungryYang/mardown-editor) 
+
+目前正在找工作中．．．
+
+wechat:1714336458
+
+email:hungryyangc@163.com
+`,
     "file":[]
 }
 
