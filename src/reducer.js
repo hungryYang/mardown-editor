@@ -53,13 +53,7 @@ export default (state ,action) => {
             return newState
         }
 
-        case SAVE_DATA:{
-            console.log(localStorage.getItem('data'))
-            localStorage.getItem('data');
-
-            return state
-        }
-         case READ_DATA:{
+        case READ_DATA:{
             const dataState =  localStorage.getItem('data')
             return JSON.parse(dataState)
         }

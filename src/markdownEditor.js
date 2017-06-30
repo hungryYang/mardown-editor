@@ -4,14 +4,9 @@ import Editor from './editor'
 import ToolBar from './toolbar/'
 import OverView from './overview/'
 
-import {saveData,readData} from './actions.js'
+import {readData} from './actions.js'
 
 class MarkdownEditor extends Component{
-    componentWillUnmount(){
-        localStorage.setItem('1','ss')
-        
-        this.props.onSaveData()
-    }
     componentWillMount(){
         this.props.onReadData()
     }
@@ -28,10 +23,6 @@ class MarkdownEditor extends Component{
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onSaveData: () => {
-      dispatch(saveData());
-    }
-    ,
     onReadData: ()=>{
       dispatch(readData())
     }
