@@ -8,7 +8,6 @@ import './views/iconfont.js'
 const ToolBar = ()=>{
     return(
         <div className="tool-bar">
-            {/*<OverView></OverView>*/}
             <SaveDialog></SaveDialog>
             <ShowFiles></ShowFiles>
         </div>            

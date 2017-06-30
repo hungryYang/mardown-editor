@@ -1,4 +1,4 @@
-import {EDIT_NOW,SAVE_FILE,DELETE_FILE} from './actionTypes.js'
+import {EDIT_NOW,SAVE_FILE,DELETE_FILE,SAVE_DATA,READ_DATA} from './actionTypes.js'
 
 const initialState = {
     "value":`## Welcome 
@@ -25,6 +25,7 @@ export default (state ,action) => {
     switch(action.type){
         case EDIT_NOW:{
             var newState = Object.assign({},state,{value:action.value})
+            localStorage.setItem('data',JSON.stringify(newState))
             return newState      
         }
 
@@ -37,6 +38,7 @@ export default (state ,action) => {
             var obj = {fileName:action.fileName,value:state.value}
             newFile.push(obj)
             newState = Object.assign({},state,{file:newFile})
+            localStorage.setItem('data',JSON.stringify(newState))
             return newState
         }
 
@@ -49,6 +51,17 @@ export default (state ,action) => {
 
             newState = Object.assign({},state,{file:newFile})
             return newState
+        }
+
+        case SAVE_DATA:{
+            console.log(localStorage.getItem('data'))
+            localStorage.getItem('data');
+
+            return state
+        }
+         case READ_DATA:{
+            const dataState =  localStorage.getItem('data')
+            return JSON.parse(dataState)
         }
         default:
             return state

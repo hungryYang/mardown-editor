@@ -40,7 +40,7 @@ class ShowFiles extends Component {
               <Button key="back" size="large" type="primary" onClick={this.handleCancel}>OK</Button>
           ]}
         >
-          <FileLists onClick={this.handleCancel}></FileLists>
+          <FileLists ></FileLists>
         </Modal>
       </div>
     );
