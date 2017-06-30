@@ -6,9 +6,9 @@ import OverView from './overview/'
 class MarkdownEditor extends Component{
     render(){
         return (
-            <div>
-                <Editor />
+            <div className="markdown">
                 <ToolBar />
+                <Editor />
                 <OverView />
             </div>
         )

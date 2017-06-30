@@ -1,0 +1,27 @@
+.overview{
+    min-height: 100vh;
+    padding:80px 20px;
+    width: 50%;
+    line-height: 2.5;
+    ul{
+        padding-left:40px;
+        list-style: inherit;
+    }
+    ol{
+        list-style: decimal;
+        padding-left: 40px;
+    }
+
+    pre{
+        display: block;
+        padding: 20px;
+        code{
+            background: #3b3d45;
+            display: block;
+        }
+    }
+
+    code {
+        background: #3b3d45;
+    }
+}

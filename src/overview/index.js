@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import marked from 'marked'
 import highlight from 'highlight.js'
 import 'highlight.js/styles/agate.css'
-
+import './style.scss'
 marked.setOptions({
   highlight: function (code) {
     return highlight.highlightAuto(code).value;
@@ -13,8 +13,8 @@ marked.setOptions({
 const OverView = ({state})=>{
     var value = state.value||' '
     return (
-        <div>
-            <span dangerouslySetInnerHTML={ {__html: marked(value)}} />
+        <div className="overview">
+            <div dangerouslySetInnerHTML={ {__html: marked(value)}} />
         </div>            
     )
 }

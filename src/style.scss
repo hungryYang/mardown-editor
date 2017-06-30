@@ -1,4 +1,7 @@
 html,body{
     font-family:'Inconsolata, monospace';
-    font-size:20px;
+    font-size:18px;
+    .markdown{
+        display: flex;
+    }
 }
