@@ -18,7 +18,7 @@ email:hungryyangc@163.com
     "file":[]
 }
 
-export default (state ,action) => {
+export default (state,action) => {
     if (Object.getOwnPropertyNames(state).length === 0) {
         return initialState    
     }
@@ -55,7 +55,11 @@ export default (state ,action) => {
 
         case READ_DATA:{
             const dataState =  localStorage.getItem('data')
-            return JSON.parse(dataState)
+            if(!dataState){
+                return state     
+            }else{
+                return JSON.parse(dataState)
+            }      
         }
         default:
             return state

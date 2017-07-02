@@ -7,7 +7,6 @@ class ditor extends Component{
 
     constructor(){
         super(...arguments)
-
         this.state={
             value:this.props.state.value
         }
@@ -16,15 +15,17 @@ class ditor extends Component{
     }
 
     onInputChange(e){
-        console.log(1)
         var value = e.target.value
+        this.setState({
+            value
+        })
         this.props.onEdit(value)
     }
 
     render(){
         return(
             <div className="edit-area">
-                <Textarea value={this.props.state.value} onChange={this.onInputChange}></Textarea>
+                <Textarea value={this.state.value} onChange={this.onInputChange}></Textarea>
             </div>            
         )
     }
