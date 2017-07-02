@@ -25,7 +25,7 @@ class ditor extends Component{
     render(){
         return(
             <div className="edit-area">
-                <Textarea value={this.state.value} onChange={this.onInputChange}></Textarea>
+                <Textarea value={this.props.state.value} onChange={this.onInputChange}></Textarea>
             </div>            
         )
     }
