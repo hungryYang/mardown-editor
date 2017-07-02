@@ -7,6 +7,7 @@ import store from './Store.js'
 import MarkdownEditor from './markdownEditor.js'
 
 import './style.scss'
+import './editor/css/style.scss'
 ReactDOM.render(
     <Provider store={store}>
         <MarkdownEditor/>
