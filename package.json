@@ -2,6 +2,7 @@
   "name": "markdown-editor",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://hungryyang.github.io/mardown-editor/",
   "dependencies": {
     "draft-js": "^0.10.1",
     "highlight.js": "^9.12.0",
