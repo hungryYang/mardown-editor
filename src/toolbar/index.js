@@ -3,7 +3,7 @@ import React from 'react'
 import SaveDialog from './views/SaveDialog.js'
 import ShowFiles from './views/ShowFiles.js'
 
-// import './css/style.scss'
+import './css/style.scss'
 import './views/iconfont.js'
 const ToolBar = ()=>{
     return(
