@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import marked from 'marked'
 import highlight from 'highlight.js'
 import 'highlight.js/styles/agate.css'
-import './style.scss'
+// import './style.scss'
 marked.setOptions({
   highlight: function (code) {
     return highlight.highlightAuto(code).value;
